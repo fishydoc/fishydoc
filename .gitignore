@@ -1,0 +1,188 @@
+# Editor configs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env.*
+*.env
+!.env.example
+
+# Coverage
+coverage/
+*.lcov
+
+# Build output
+dist/
+build/
+out/
+tmp/
+temp/
+
+# Generated files
+*.generated.*
+*.gen.*
+
+# ============================
+# Docker / Containers
+# ============================
+.docker/
+docker-compose.override.yml
+docker-data/
+**/data/
+**/volumes/
+
+# ============================
+# Rust (services/, libs/)
+# ============================
+target/
+Cargo.lock  # optional: commit if you want fully pinned deps
+**/*.rs.bk
+
+# Rust tooling
+rustfmt.toml.bak
+
+# ============================
+# Python (workers/, tooling/)
+# ============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.wheels/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.dmypy.json
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Packaging
+build/
+develop-eggs/
+dist/
+
+# UV (modern Python tool)
+.uv/
+
+# Jupyter
+.ipynb_checkpoints
+
+# ============================
+# Node.js / Web UI (clients/web)
+# ============================
+node_modules/
+.pnpm-store/
+.next/
+.nuxt/
+.svelte-kit/
+out/
+
+# Build artifacts
+*.tsbuildinfo
+.cache/
+.storybook/
+
+# Frontend package managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# ============================
+# Kotlin / Gradle (api-ktor, android)
+# ============================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ/Android Studio
+*.iml
+.idea/
+local.properties
+*.hprof
+
+# APK / Android build
+*.apk
+*.ap_
+*.aab
+android/app/build/
+android/.gradle/
+android/captures/
+
+# ============================
+# Databases & Storage
+# ============================
+# Postgres dumps
+*.sql
+*.sqlite
+*.db
+
+# MinIO / S3 mock buckets
+infra/minio/data/
+
+# ============================
+# Tests
+# ============================
+test-output/
+tests/tmp/
+tests/logs/
+
+# ============================
+# Migrations
+# ============================
+migrations/generated/
+
+# ============================
+# Secrets / Keys
+# ============================
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+secrets.json
+config/secrets/
+
+# ============================
+# Monorepo Structure
+# ============================
+# Ignore per-service build outputs
+services/*/dist/
+services/*/build/
+clients/*/dist/
+clients/*/build/
+
+# Ignore generated API clients
+clients/web/packages/api-client/
+
+# ============================
+# Local Development Helpers
+# ============================
+.envrc
+.justfile.local
+.idea_modules/
+run/
+localstack/
+
+# ============================
+# JetBrains Shared Indexes
+# ============================
+.jps/
+.jps-cache/

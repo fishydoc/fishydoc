@@ -1,0 +1,29 @@
+#For use during Development
+name: fishydoc-dev
+services:
+  db:
+    image: postgres:17-alpine
+    env_file:
+      - ./dev.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - fishydoc-dev
+  db-mgmt:
+    image: adminer
+    ports:
+      - "8080:8080"
+    restart: always
+    networks:
+      - fishydoc-dev
+
+networks:
+  fishydoc-dev:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local
